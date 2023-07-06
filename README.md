@@ -14,12 +14,18 @@ npm install
 
 ### Install sops
 
-In order to add secrets to this repository you MUST install [sops][sops] locally. 
+In order to add secrets to this repository you MUST [install sops locally](https://github.com/getsops/sops#download).
 
 On Mac, sops can be easily installed via Homebrew:
 
 ```
 brew install sops
+```
+
+## Testing
+
+```
+npm test
 ```
 
 ## Stacks

@@ -1,0 +1,34 @@
+{
+  "name": "cdk-sops-secrets-management",
+  "version": "0.1.0",
+  "bin": {
+    "secrets-management": "bin/secrets-management.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk",
+    "postinstall": "./scripts/get-sops.sh"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.10",
+    "@types/node": "10.17.27",
+    "aws-cdk": "^2.74.0",
+    "esbuild": "0",
+    "jest": "26.4.2",
+    "ts-jest": "^26.2.0",
+    "ts-node": "^9.0.0",
+    "typescript": "~3.9.7"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.75.0",
+    "@aws-sdk/client-secrets-manager": "^3.75.0",
+    "aws-cdk-lib": "^2.74.0",
+    "constructs": "^10.1.313",
+    "source-map-support": "^0.5.16"
+  },
+  "engines": {
+    "node": ">=16.19.0"
+  }
+}
