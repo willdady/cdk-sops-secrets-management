@@ -37,7 +37,7 @@ Refer to the comments in this file for the values you need to supply.
 ### SopsKeyStack
 
 This stack defines a single resource, a KMS key which is used by [sops][sops] to encrypt and decrypt secrets.
-This stack is deployed into 2 regions, `ap-southeast-2` and `us-east-1`. 
+This stack is deployed into 2 regions. 
 We refer to each as the primary and secondary keys respectively. 
 Both keys are used when encrypting secrets. 
 Only one key, the primary, is used to decrypt secrets though either key can be used.
