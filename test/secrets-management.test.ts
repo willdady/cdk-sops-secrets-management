@@ -23,7 +23,7 @@ describe('SopsSecret', () => {
     template.resourceCountIs('AWS::Lambda::LayerVersion', 1);
     template.resourceCountIs('Custom::SopsSecret', 1);
     template.hasResourceProperties('AWS::Lambda::Function', {
-      Runtime: 'nodejs16.x',
+      Runtime: 'nodejs18.x',
     });
   });
 

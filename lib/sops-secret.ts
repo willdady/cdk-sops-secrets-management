@@ -170,7 +170,7 @@ export class SopsSecret extends Construct {
       code: lambda.Code.fromAsset(path.join(__dirname, 'sops-layer')),
       description: 'Contains Mozilla sops',
       compatibleArchitectures: [lambda.Architecture.X86_64],
-      compatibleRuntimes: [lambda.Runtime.NODEJS_16_X],
+      compatibleRuntimes: [lambda.Runtime.NODEJS_18_X],
     });
 
     const secretUpdaterFunction = new lambdaNodeJs.NodejsFunction(
@@ -181,7 +181,7 @@ export class SopsSecret extends Construct {
         layers: [sopsLayer],
         handler: 'onEvent',
         memorySize: 256,
-        runtime: lambda.Runtime.NODEJS_16_X,
+        runtime: lambda.Runtime.NODEJS_18_X,
       },
     );
     secretUpdaterFunction.addToRolePolicy(
